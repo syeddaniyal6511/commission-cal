@@ -1,0 +1,268 @@
+name: Formulas
+description: |-
+
+  Endpoints for managing and simulating commission formulas.
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/formulas
+    metadata:
+      custom: []
+      groupName: Formulas
+      groupDescription: |-
+
+        Endpoints for managing and simulating commission formulas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List all formulas.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/formulas
+    metadata:
+      custom: []
+      groupName: Formulas
+      groupDescription: |-
+
+        Endpoints for managing and simulating commission formulas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a new formula.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      version:
+        custom: []
+        name: version
+        description: 'Must not be greater than 50 characters.'
+        required: true
+        example: vmqeopfuudtdsufvyvddq
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      expression:
+        custom: []
+        name: expression
+        description: 'Must not be greater than 2000 characters.'
+        required: true
+        example: amniihfqcoynlazghdtqt
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      variables:
+        custom: []
+        name: variables
+        description: 'Must not have more than 8 items.'
+        required: false
+        example: null
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'variables[].name':
+        custom: []
+        name: 'variables[].name'
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: qxbajwbpilpmufinllwlo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'variables[].expression':
+        custom: []
+        name: 'variables[].expression'
+        description: 'Must not be greater than 2000 characters.'
+        required: true
+        example: auydlsmsjuryvojcybzvr
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'variables[].execution_order':
+        custom: []
+        name: 'variables[].execution_order'
+        description: 'Must be at least 0.'
+        required: false
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      version: vmqeopfuudtdsufvyvddq
+      expression: amniihfqcoynlazghdtqt
+      variables:
+        -
+          name: qxbajwbpilpmufinllwlo
+          expression: auydlsmsjuryvojcybzvr
+          execution_order: 4
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/formulas/{formula_id}/simulate'
+    metadata:
+      custom: []
+      groupName: Formulas
+      groupDescription: |-
+
+        Endpoints for managing and simulating commission formulas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Simulate a formula.'
+      description: 'Returns computed output values for a formula without persisting anything.'
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      formula_id:
+        custom: []
+        name: formula_id
+        description: 'The ID of the formula.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      formula_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/formulas/{formula_id}/activate'
+    metadata:
+      custom: []
+      groupName: Formulas
+      groupDescription: |-
+
+        Endpoints for managing and simulating commission formulas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Activate a formula.'
+      description: 'Sets the given formula as the active one used for commission calculations.'
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      formula_id:
+        custom: []
+        name: formula_id
+        description: 'The ID of the formula.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      formula_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    controller: null
+    method: null
+    route: null

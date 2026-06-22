@@ -6,10 +6,20 @@ use App\Services\AuthService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
+/**
+ * @group Authentication
+ *
+ * Endpoints for registering, logging in, and managing the authenticated user.
+ */
 class AuthController extends Controller
 {
     public function __construct(private readonly AuthService $authService) {}
 
+    /**
+     * Register a new user.
+     *
+     * @unauthenticated
+     */
     public function register(Request $request): JsonResponse
     {
         $validated = $request->validate([
@@ -24,6 +34,11 @@ class AuthController extends Controller
         return response()->json(['token' => $token, 'user' => $user], 201);
     }
 
+    /**
+     * Log in and get a Bearer token.
+     *
+     * @unauthenticated
+     */
     public function login(Request $request): JsonResponse
     {
         $validated = $request->validate([
@@ -38,6 +53,9 @@ class AuthController extends Controller
         return response()->json(['token' => $token, 'user' => $user]);
     }
 
+    /**
+     * Log out (revoke the current token).
+     */
     public function logout(Request $request): JsonResponse
     {
         $request->user()->currentAccessToken()->delete();
@@ -45,11 +63,17 @@ class AuthController extends Controller
         return response()->json(['message' => 'Logged out successfully']);
     }
 
+    /**
+     * Get the authenticated user's profile.
+     */
     public function profile(Request $request): JsonResponse
     {
         return response()->json(['data' => $request->user()]);
     }
 
+    /**
+     * Update the authenticated user's name and email.
+     */
     public function updateProfile(Request $request): JsonResponse
     {
         $validated = $request->validate([
@@ -62,6 +86,9 @@ class AuthController extends Controller
         return response()->json(['status' => 200, 'data' => $user]);
     }
 
+    /**
+     * Change the authenticated user's password.
+     */
     public function updatePassword(Request $request): JsonResponse
     {
         $request->validate([

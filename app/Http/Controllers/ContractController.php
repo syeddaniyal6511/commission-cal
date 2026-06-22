@@ -9,10 +9,21 @@ use App\Services\ContractService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
+/**
+ * @group Contracts
+ *
+ * CRUD endpoints for managing contracts.
+ */
 class ContractController extends Controller
 {
     public function __construct(private readonly ContractService $contractService) {}
 
+    /**
+     * List all contracts.
+     *
+     * @queryParam search string Search contracts by name. Example: acme
+     * @queryParam per_page integer Number of results per page (1–100). Defaults to 15. Example: 15
+     */
     public function index(Request $request): JsonResponse
     {
         $perPage = $request->integer('per_page', 15);
@@ -26,6 +37,9 @@ class ContractController extends Controller
         return response()->json($contracts);
     }
 
+    /**
+     * Create a new contract.
+     */
     public function store(StoreContractRequest $request): JsonResponse
     {
         $contract = $this->contractService->store($request->validated());
@@ -33,11 +47,17 @@ class ContractController extends Controller
         return response()->json($contract, 201);
     }
 
+    /**
+     * Get a single contract.
+     */
     public function show(Contract $contract): JsonResponse
     {
         return response()->json($contract);
     }
 
+    /**
+     * Update a contract.
+     */
     public function update(UpdateContractRequest $request, Contract $contract): JsonResponse
     {
         $contract = $this->contractService->update($contract, $request->validated());
@@ -45,6 +65,9 @@ class ContractController extends Controller
         return response()->json($contract);
     }
 
+    /**
+     * Delete a contract.
+     */
     public function destroy(Contract $contract): JsonResponse
     {
         $this->contractService->destroy($contract);
