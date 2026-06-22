@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('commission_calculations', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('contract_id')->constrained('contracts')->cascadeOnDelete();
+            $table->foreignId('formula_id')->nullable()->constrained('formulas')->nullOnDelete();
+            $table->decimal('commission', 14, 4);
+            $table->json('variables_json');
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('commission_calculations');
+    }
+};
