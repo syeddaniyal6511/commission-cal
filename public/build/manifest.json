@@ -1,0 +1,173 @@
+{
+  "_ContractForm-DRztXsVU.js": {
+    "file": "assets/ContractForm-DRztXsVU.js",
+    "name": "ContractForm",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_useContracts-B4ChO6C6.js": {
+    "file": "assets/useContracts-B4ChO6C6.js",
+    "name": "useContracts",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_useFormulas-CuaGJADb.js": {
+    "file": "assets/useFormulas-CuaGJADb.js",
+    "name": "useFormulas",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-47doKt6V.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-D7mK9SXx.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/pages/auth/Login.vue",
+      "resources/js/pages/auth/Register.vue",
+      "resources/js/pages/Dashboard.vue",
+      "resources/js/pages/FormulaList.vue",
+      "resources/js/pages/FormulaBuilder.vue",
+      "resources/js/pages/contracts/ContractList.vue",
+      "resources/js/pages/contracts/ContractCreate.vue",
+      "resources/js/pages/contracts/ContractEdit.vue",
+      "resources/js/pages/contracts/ContractCalculations.vue",
+      "resources/js/pages/settings/index.vue",
+      "resources/js/pages/settings/profile.vue",
+      "resources/js/pages/settings/password.vue"
+    ],
+    "css": [
+      "assets/app-BlU5GwAg.css"
+    ]
+  },
+  "resources/js/pages/Dashboard.vue": {
+    "file": "assets/Dashboard-Do3PlQuT.js",
+    "name": "Dashboard",
+    "src": "resources/js/pages/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/pages/FormulaBuilder.vue": {
+    "file": "assets/FormulaBuilder-BgKkr60G.js",
+    "name": "FormulaBuilder",
+    "src": "resources/js/pages/FormulaBuilder.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useFormulas-CuaGJADb.js"
+    ],
+    "css": [
+      "assets/FormulaBuilder-CHetYlME.css"
+    ]
+  },
+  "resources/js/pages/FormulaList.vue": {
+    "file": "assets/FormulaList-lhKMqvAa.js",
+    "name": "FormulaList",
+    "src": "resources/js/pages/FormulaList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useFormulas-CuaGJADb.js"
+    ]
+  },
+  "resources/js/pages/auth/Login.vue": {
+    "file": "assets/Login-DHUOzs1A.js",
+    "name": "Login",
+    "src": "resources/js/pages/auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/pages/auth/Register.vue": {
+    "file": "assets/Register-Cdm-B1i7.js",
+    "name": "Register",
+    "src": "resources/js/pages/auth/Register.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/pages/contracts/ContractCalculations.vue": {
+    "file": "assets/ContractCalculations-CIUoBCGH.js",
+    "name": "ContractCalculations",
+    "src": "resources/js/pages/contracts/ContractCalculations.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/pages/contracts/ContractCreate.vue": {
+    "file": "assets/ContractCreate-CVp42qMn.js",
+    "name": "ContractCreate",
+    "src": "resources/js/pages/contracts/ContractCreate.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_ContractForm-DRztXsVU.js",
+      "_useContracts-B4ChO6C6.js"
+    ]
+  },
+  "resources/js/pages/contracts/ContractEdit.vue": {
+    "file": "assets/ContractEdit-2Q-Bs6np.js",
+    "name": "ContractEdit",
+    "src": "resources/js/pages/contracts/ContractEdit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_ContractForm-DRztXsVU.js",
+      "_useContracts-B4ChO6C6.js"
+    ]
+  },
+  "resources/js/pages/contracts/ContractList.vue": {
+    "file": "assets/ContractList-IPXa2clh.js",
+    "name": "ContractList",
+    "src": "resources/js/pages/contracts/ContractList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useContracts-B4ChO6C6.js"
+    ]
+  },
+  "resources/js/pages/settings/index.vue": {
+    "file": "assets/index-fo6doCsU.js",
+    "name": "index",
+    "src": "resources/js/pages/settings/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/pages/settings/password.vue": {
+    "file": "assets/password-DDgdsNyy.js",
+    "name": "password",
+    "src": "resources/js/pages/settings/password.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/pages/settings/profile.vue": {
+    "file": "assets/profile-DRQoKR4q.js",
+    "name": "profile",
+    "src": "resources/js/pages/settings/profile.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  }
+}
