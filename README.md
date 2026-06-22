@@ -191,6 +191,18 @@ php artisan test tests/Unit/FormulaSimulationServiceTest.php
 
 ## API Reference
 
+Interactive API documentation (Scribe) is available at:
+
+| Format | URL |
+|---|---|
+| HTML docs | https://commission-engine.cms-it-experts.com/docs |
+| Postman collection | https://commission-engine.cms-it-experts.com/docs.postman |
+| OpenAPI spec | https://commission-engine.cms-it-experts.com/docs.openapi |
+
+To regenerate after making changes: `php artisan scribe:generate`
+
+---
+
 All protected routes require `Authorization: Bearer <token>`.
 
 ### Auth
